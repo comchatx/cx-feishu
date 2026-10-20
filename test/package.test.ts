@@ -19,7 +19,7 @@ it("the skill's description says what it needs and how both packages install", a
   const { loader } = await loadPackage(ROOT);
   const [skill] = loader.getSkills().skills;
   expect(skill!.description).toContain("if no notify tool is offered, it is not installed");
-  expect(skill!.description).toContain("`pi install -l npm:@amaster.ai/pi-channels` run in /tenant (without -l it is gone at the box's next start)");
+  expect(skill!.description).toContain("`pi install -l npm:@amaster.ai/pi-channels@0.1.28` run in /tenant (without -l it is gone at the box's next start)");
   expect(skill!.description).toContain("`pi install -l npm:cx-feishu` in /tenant");
 });
 

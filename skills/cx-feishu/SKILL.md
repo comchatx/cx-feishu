@@ -1,19 +1,19 @@
 ---
 name: cx-feishu
-description: "Sending a message to a Feishu (飞书) group bot from a ComChatX box - a report, an alert, a heartbeat's result - with pi-channels (`@amaster.ai/pi-channels`) and its `notify` tool; what pi-channels' own words miss here. Needs @amaster.ai/pi-channels; if no notify tool is offered, it is not installed, and the seller installs it in Plugins once it is listed there, or it is installed with `pi install -l npm:@amaster.ai/pi-channels` run in /tenant (without -l it is gone at the box's next start). cx-feishu itself installs the same way: Plugins once listed, or `pi install -l npm:cx-feishu` in /tenant."
+description: "Sending a message to a Feishu (飞书) group bot from a ComChatX box - a report, an alert, a heartbeat's result - with pi-channels (`@amaster.ai/pi-channels`) and its `notify` tool; what pi-channels' own words miss here. Needs @amaster.ai/pi-channels; if no notify tool is offered, it is not installed, and the seller installs it in Plugins once it is listed there, or it is installed with `pi install -l npm:@amaster.ai/pi-channels@0.1.28` run in /tenant (without -l it is gone at the box's next start). cx-feishu itself installs the same way: Plugins once listed, or `pi install -l npm:cx-feishu` in /tenant."
 ---
 
 ## Where the bot's address comes from
 
 - A bot is a route in pi-channels' settings: `notify action:"list"` shows the routes and hides their addresses. Send to a route by its name as `adapter`.
 - An address the seller gives on the Plugins page works from the box's next open, not in the conversation already open.
-- A `pi-channels` section in `/tenant/.pi/settings.json` replaces the one from Plugins as a whole: its routes are the only ones, and the Plugins bot is gone until that section is removed.
+- A `pi-channels` section in `/tenant/.pi/settings.json` replaces the one from Plugins key by key: its `adapters`, `routes` and `bridge` each replace the Plugins ones, and a key it leaves out keeps the Plugins value. A section meant to stop the Plugins bot carries all three.
 - An address the seller says in chat, or one passed as `recipient`, is kept in the conversation's file. A `recipient` passed with a route replaces the route's own address for that send. Use the route and pass no `recipient`.
 
 ## What a send needs
 
 - Pass the message as `json`, the body a Feishu bot reads, for example `{"msg_type":"text","content":{"text":"..."}}`. Without `json`, `notify` posts its own envelope (`text`, `source`, `metadata`, `timestamp`), which Feishu takes no text from and refuses.
-- `action:"test"` has no `json`, so it posts that envelope: a bot refuses it. Test with a `send` and a short `json` text instead.
+- `action:"test"` without `json` posts that envelope: a bot refuses it. Test with a short `json` text.
 - A bot with keywords refuses any message whose text lacks one of them; ask the seller for the bot's keywords and put one in the text. A bot with 签名校验 (signature check) or an IP whitelist refuses every send from here.
 
 ## What "Sent" means
