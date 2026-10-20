@@ -1,0 +1,44 @@
+{
+  "name": "cx-feishu",
+  "version": "0.1.0",
+  "description": "A pi package that tells the model what pi-channels' notify needs to reach a Feishu group bot from a ComChatX box, and what its answer means.",
+  "license": "MIT",
+  "author": "ComChatX",
+  "homepage": "https://github.com/comchatx/cx-feishu#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comchatx/cx-feishu.git"
+  },
+  "bugs": "https://github.com/comchatx/cx-feishu/issues",
+  "keywords": [
+    "pi-package"
+  ],
+  "type": "module",
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "files": [
+    "skills"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.1.0",
+    "@types/node": "26.2.0",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  },
+  "overrides": {
+    "@earendil-works/chord": "1.1.0",
+    "@earendil-works/pi-ai": "1.1.0",
+    "@earendil-works/pi-mcp": "1.1.0",
+    "@earendil-works/pi-tui": "1.1.0",
+    "@earendil-works/pi-codemode": "1.1.0",
+    "@earendil-works/pi-agent-core": "1.1.0",
+    "@earendil-works/pi-telemetry": "1.1.0"
+  }
+}
