@@ -31,3 +31,14 @@ it("the package neither bundles nor lists pi-channels, and carries no install sc
   expect(manifest["pi"]).toEqual({ skills: ["./skills"] });
   expect(readdirSync(ROOT)).not.toContain("extensions");
 });
+
+it("the comchatx field draws the card in Chinese and names pi-channels in builds, never in needs, since it ships no skill of its name", () => {
+  const manifest = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as Record<string, any>;
+  const card = manifest["comchatx"];
+  expect(Object.keys(card).sort()).toEqual(["about", "builds", "description", "mark", "order", "section"]);
+  expect(card.about).toMatch(/飞书/);
+  expect(card.description).toMatch(/飞书/);
+  expect(card).toMatchObject({ mark: { line: "megaphone" }, section: "extensions", order: 40 });
+  expect(card.builds).toEqual(["@amaster.ai/pi-channels"]);
+  expect(card.needs).toBeUndefined();
+});
