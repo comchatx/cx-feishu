@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -32,13 +33,19 @@ it("the package neither bundles nor lists pi-channels, and carries no install sc
   expect(readdirSync(ROOT)).not.toContain("extensions");
 });
 
-it("the comchatx field draws the card in Chinese and names pi-channels in builds, never in needs, since it ships no skill of its name", () => {
+it("the comchatx field draws the card in Chinese, carries no description the page never draws, and names pi-channels in builds, never in needs, since it ships no skill of its name", () => {
   const manifest = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as Record<string, any>;
   const card = manifest["comchatx"];
-  expect(Object.keys(card).sort()).toEqual(["about", "builds", "description", "mark", "order", "section"]);
+  expect(Object.keys(card).sort()).toEqual(["about", "builds", "mark", "order", "section"]);
   expect(card.about).toMatch(/飞书/);
-  expect(card.description).toMatch(/飞书/);
   expect(card).toMatchObject({ mark: { line: "megaphone" }, section: "extensions", order: 40 });
   expect(card.builds).toEqual(["@amaster.ai/pi-channels"]);
   expect(card.needs).toBeUndefined();
+});
+
+it("ships its README in English and in Chinese", () => {
+  // npm 12 keys its answer by the package's name; earlier ones answer a list.
+  const answer = JSON.parse(execFileSync("npm", ["pack", "--dry-run", "--json", "--ignore-scripts"], { cwd: ROOT, encoding: "utf8" })) as { files: { path: string }[] }[] | Record<string, { files: { path: string }[] }>;
+  const packed = Array.isArray(answer) ? answer : Object.values(answer);
+  expect(packed[0]!.files.map((file) => file.path)).toEqual(expect.arrayContaining(["README.md", "README.zh-CN.md"]));
 });
