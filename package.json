@@ -1,12 +1,11 @@
 {
   "name": "cx-feishu",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A pi package that tells the model what pi-channels' notify needs to reach a Feishu group bot from a ComChatX box, and what its answer means.",
   "license": "MIT",
   "author": "ComChatX",
   "comchatx": {
     "about": "让 cx 通过你的飞书机器人给你发消息。",
-    "description": "cx 会在你的机器人所在的飞书群里发消息，比如某个 listing 丢失 Buy Box 时。在飞书里回复的消息不会传给 cx。\n\n安装后，在它的设置里填写机器人的 Webhook 地址。",
     "mark": {
       "line": "megaphone"
     },
@@ -32,7 +31,8 @@
     ]
   },
   "files": [
-    "skills"
+    "skills",
+    "README.zh-CN.md"
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
