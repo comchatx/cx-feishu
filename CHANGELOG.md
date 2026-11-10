@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+- The card's line and the Overview, in English and Chinese, are the words signed on 2026-11-10: "Sends cx's reports and check results to your Feishu group." as npm's `description`, and 「在飞书群里收到 cx 发来的报告和检查结果。」 as `comchatx.about`. They said "A pi package that tells the model what pi-channels' notify needs to reach a Feishu group bot from a ComChatX box, and what its answer means." and 「让 cx 通过你的飞书机器人给你发消息。」.
+- What only a developer reads moved from the README to `DEVELOPING.md`: the opening description and "A bot", "Install", "Develop".
+
 ## 0.1.2
 
 - The README in Chinese, `README.zh-CN.md`, which the Plugins page draws as the Overview in Chinese.
