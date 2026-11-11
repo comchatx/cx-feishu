@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+
+- The card's name is the one signed on 2026-11-11, "Feishu", in `comchatx.name`, the same on the Chinese and the English page.
+- The README, in English and Chinese, calls each of our plugins by its card's name, not its npm name.
+
 ## 0.1.4
 
 - The skill's line on the Plugins page is the words signed on 2026-11-10: `comchatx.skills["cx-feishu"]` carries 「把 cx 的报告和提醒发到你的飞书群。」 and "Sends cx's reports and alerts to Feishu." The skill's own `description` is unchanged.
