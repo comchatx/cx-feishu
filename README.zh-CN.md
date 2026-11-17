@@ -1,4 +1,4 @@
-cx 会把报告、提醒和检查结果发到你的飞书群，你和群里的同事不打开 ComChatX 也能看到。配上定时任务或亚马逊 listing 巡检，每次到点检查完，cx 就把结果发过去。
+cx 会把报告、提醒和检查结果发到你的飞书群，你和群里的同事不打开 ComChatX 也能看到。配上[定时任务](https://www.npmjs.com/package/@comchatx/cx-schedule)或[亚马逊 listing 巡检](https://www.npmjs.com/package/@comchatx/cx-listing-watch)，每次到点检查完，cx 就把结果发过去。
 
 你可以这样问：
 

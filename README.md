@@ -1,4 +1,4 @@
-cx sends reports, reminders and check results to your Feishu group, where you and everyone in it can read them without opening ComChatX. With Scheduled Tasks or Amazon Listing Watch, cx sends each check's result when the check is done.
+cx sends reports, reminders and check results to your Feishu group, where you and everyone in it can read them without opening ComChatX. With [Scheduled Tasks](https://www.npmjs.com/package/@comchatx/cx-schedule) or [Amazon Listing Watch](https://www.npmjs.com/package/@comchatx/cx-listing-watch), cx sends each check's result when the check is done.
 
 Some things you can ask:
 
