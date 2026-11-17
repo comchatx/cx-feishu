@@ -10,4 +10,4 @@ Some things you can ask:
 
 A custom bot in a Feishu group, with its webhook address pasted into the plugin's Settings. The bot's security settings can use a custom keyword, but not a signature check or an IP whitelist, which stop every message.
 
-Feishu needs pi-channels, which Plugins installs with it.
+Feishu Connector needs pi-channels, which Plugins installs with it.

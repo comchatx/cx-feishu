@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6
+
+- The card's name is the one signed on 2026-11-17: "Feishu Connector" on the English page (`comchatx.name`) and 「飞书连接器」 on the Chinese page (`comchatx.nameZh`).
+- The README, in English and Chinese, calls each plugin of ours it names by the card's name signed on 2026-11-17.
+
 ## 0.1.5
 
 - The card's name is the one signed on 2026-11-11, "Feishu", in `comchatx.name`, the same on the Chinese and the English page.
