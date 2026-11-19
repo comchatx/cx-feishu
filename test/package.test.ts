@@ -36,8 +36,9 @@ it("the package neither bundles nor lists pi-channels, and carries no install sc
 it("the comchatx field draws the card in Chinese, carries no description the page never draws, and names pi-channels in builds, never in needs, since it ships no skill of its name", () => {
   const manifest = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as Record<string, any>;
   const card = manifest["comchatx"];
-  expect(Object.keys(card).sort()).toEqual(["about", "builds", "mark", "name", "order", "section", "skills"]);
-  expect(card.name).toBe("Feishu");
+  expect(Object.keys(card).sort()).toEqual(["about", "builds", "mark", "name", "nameZh", "order", "section", "skills"]);
+  expect(card.name).toBe("Feishu Connector");
+  expect(card.nameZh).toBe("飞书连接器");
   expect(card.skills).toEqual({ "cx-feishu": { zh: "把 cx 的报告和提醒发到你的飞书群。", en: "Sends cx's reports and alerts to Feishu." } });
   expect(card.about).toMatch(/飞书/);
   expect(card).toMatchObject({ mark: { line: "megaphone" }, section: "extensions", order: 40 });

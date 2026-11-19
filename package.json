@@ -1,11 +1,12 @@
 {
   "name": "cx-feishu",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Sends cx's reports and check results to your Feishu group.",
   "license": "MIT",
   "author": "ComChatX",
   "comchatx": {
-    "name": "Feishu",
+    "name": "Feishu Connector",
+    "nameZh": "飞书连接器",
     "about": "在飞书群里收到 cx 发来的报告和检查结果。",
     "mark": {
       "line": "megaphone"
