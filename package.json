@@ -1,6 +1,6 @@
 {
   "name": "cx-feishu",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Sends cx's reports and check results to your Feishu group.",
   "license": "MIT",
   "author": "ComChatX",

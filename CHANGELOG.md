@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7
+
+- The README's first paragraph, in English and Chinese, loses its last sentence, the one naming Scheduled Tasks and Amazon Listing Watch (signed on 2026-11-18).
+- The README's "What it needs" section loses its last sentence, the one saying it needs pi-channels, which the Plugins page draws from `comchatx.builds`; the bot paragraph stays.
+
 ## 0.1.6
 
 - The card's name is the one signed on 2026-11-17: "Feishu Connector" on the English page (`comchatx.name`) and 「飞书连接器」 on the Chinese page (`comchatx.nameZh`).
