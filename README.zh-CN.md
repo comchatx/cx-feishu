@@ -1,4 +1,4 @@
-cx 会把报告、提醒和检查结果发到你的飞书群，你和群里的同事不打开 ComChatX 也能看到。配上[定时任务](https://www.npmjs.com/package/@comchatx/cx-schedule)或[亚马逊 listing 巡检](https://www.npmjs.com/package/@comchatx/cx-listing-watch)，每次到点检查完，cx 就把结果发过去。
+cx 会把报告、提醒和检查结果发到你的飞书群，你和群里的同事不打开 ComChatX 也能看到。
 
 你可以这样问：
 
@@ -9,5 +9,3 @@ cx 会把报告、提醒和检查结果发到你的飞书群，你和群里的�
 ## 需要
 
 一个飞书群里的自定义机器人，在插件的「设置」里填入它的 Webhook 地址。机器人的安全设置只用自定义关键词；开启签名校验或 IP 白名单后，消息发不出去。
-
-飞书连接器需要 pi-channels，「插件」页会一并安装。

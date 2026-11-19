@@ -1,4 +1,4 @@
-cx sends reports, reminders and check results to your Feishu group, where you and everyone in it can read them without opening ComChatX. With [Scheduled Tasks](https://www.npmjs.com/package/@comchatx/cx-schedule) or [Amazon Listing Watch](https://www.npmjs.com/package/@comchatx/cx-listing-watch), cx sends each check's result when the check is done.
+cx sends reports, reminders and check results to your Feishu group, where you and everyone in it can read them without opening ComChatX.
 
 Some things you can ask:
 
@@ -9,5 +9,3 @@ Some things you can ask:
 ## What it needs
 
 A custom bot in a Feishu group, with its webhook address pasted into the plugin's Settings. The bot's security settings can use a custom keyword, but not a signature check or an IP whitelist, which stop every message.
-
-Feishu Connector needs pi-channels, which Plugins installs with it.
